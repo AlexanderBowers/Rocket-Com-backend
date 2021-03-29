@@ -10,47 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_26_004819) do
+ActiveRecord::Schema.define(version: 0) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "alerts", force: :cascade do |t|
-    t.string "errorId"
-    t.string "errorSeverity"
-    t.string "errorCategory"
-    t.string "errorMessage"
-    t.string "longMessage"
-    t.bigint "errorTime"
-    t.boolean "selected"
-    t.boolean "new"
-    t.boolean "expanded"
-  end
-
-  create_table "contacts", force: :cascade do |t|
-    t.string "_id"
-    t.string "contactId"
-    t.string "contactStatus"
-    t.integer "contactName"
-    t.string "contactGround"
-    t.string "contactSatellite"
-    t.string "contactEquipment"
-    t.string "contactState"
-    t.string "contactStep"
-    t.text "contactDetail"
-    t.integer "contactBeginTimestamp"
-    t.integer "contactEndTimestamp"
-    t.decimal "contactLatitude"
-    t.decimal "contactLongitude"
-    t.decimal "contactAzimuth"
-    t.decimal "contactElevation"
-    t.string "contactResolution"
-    t.string "contactResolutionStatus"
-  end
-
-  create_table "users", force: :cascade do |t|
-    t.string "username"
-    t.string "password_digest"
-  end
 
 end
