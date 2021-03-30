@@ -9,11 +9,11 @@
     Contact.destroy_all
     User.destroy_all
 
-    alerts = JSON.parse(File.read('../alerts.json'))
+    alerts = JSON.parse(File.read('./alerts.json'))
     alerts.each do |alert|
         Alert.create!(alert)
     end
-    contacts = JSON.parse(File.read('../contacts.json'))
+    contacts = JSON.parse(File.read('./contacts.json'))
     contacts.each do |contact|
         Contact.create!(contact)
     end
