@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
     Alert.destroy_all
     Contact.destroy_all
-    User.destroy_alls
+    User.destroy_all
 
     alerts = JSON.parse(File.read('../alerts.json'))
     alerts.each do |alert|
